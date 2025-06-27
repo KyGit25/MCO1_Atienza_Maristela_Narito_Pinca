@@ -49,8 +49,38 @@ def heuristic_goal(vertex):
 
 
 def main(graph):
-    start_id = input("Enter start: ")
-    goal_id = input("Enter goal: ")
+    labels = {
+        "A": "University Mall",
+        "B": "Mcdonalds",
+        "C": "Pericos",
+        "D": "Bloemen Hall",
+        "E": "W.H. Taft Residence",
+        "F": "EGI Taft",
+        "G": "Castro Street",
+        "H": "Agno Food Court",
+        "I": "One Archer's",
+        "J1": "Br. Andrew Gonzales Hall",
+        "J2": "Enrique Razon Sports Center",
+        "K": "Green Mall",
+        "L": "Green Court",
+        "M": "Sherwood",
+        "N": "Jollibee",
+        "O": "Dagong St.",
+        "P": "Burgundy",
+        "Q": "Estrada St.",
+        "R": "D' Student's Place",
+        "S": "Leon Guinto St.",
+        "T": "P.Ocampo St.",
+        "U": "Fidel A. Reyes St."
+    }
+
+    print("\nAvailable Locations: ")
+    for key, value in labels.items():
+        print(f"{key} - {value}")
+    print()
+
+    start_id = input("Enter start: ").strip().upper()
+    goal_id = input("Enter goal: ").strip().upper()
 
     start = graph.getVertex(start_id)
     goal = graph.getVertex(goal_id)
